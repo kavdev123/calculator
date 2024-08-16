@@ -1,61 +1,75 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>A Simple Calculator</title>
-    <link rel="stylesheet" type="text/css" href="css/custom.css">
-</head>
-<body>
+<!DOCTYPE html> 
+<html> 
 
+<head> 
+	<title>HTML Calculator</title> 
 
-<div id="calculator" align="center">
+	<!-- For styling -->
+	<style> 
+		table { 
+			border: 1px solid black; 
+			margin-left: auto; 
+			margin-right: auto; 
+		} 
+		
+		input[type="button"] { 
+			width: 100%; 
+			padding: 20px 40px; 
+			background-color: green; 
+			color: white; 
+			font-size: 24px; 
+			font-weight: bold; 
+			border: none; 
+			border-radius: 5px; 
+		} 
+		
+		input[type="text"] { 
+			padding: 20px 30px; 
+			font-size: 24px; 
+			font-weight: bold; 
+			border: none; 
+			border-radius: 5px; 
+			border: 2px solid black; 
+		} 
+	</style> 
+</head> 
 
-    <div>
-        <input id="screen" value="0"><br>
-    </div>
+<body> 
 
-    <div>
-        <button onclick="processNumberButton(this.innerHTML)">1</button>
-        <button onclick="processNumberButton(this.innerHTML)">2</button>
-        <button onclick="processNumberButton(this.innerHTML)">3</button>
-        <button onclick="processOperatorButton(this.innerHTML)" class="operator">+</button>
-    </div>
+	<!-- Create table -->
+	<table id="calcu"> 
+		<tr> 
+			<td colspan="3"> 
+				<input type="text" id="result"> 
+			</td> 
+			<td><input type="button" value="c"></td> 
+		</tr> 
 
-    <div>
-        <button onclick="processNumberButton(this.innerHTML)">4</button>
-        <button onclick="processNumberButton(this.innerHTML)">5</button>
-        <button onclick="processNumberButton(this.innerHTML)">6</button>
-        <button onclick="processOperatorButton(this.innerHTML)" class="operator">-</button>
-    </div>
+		<tr> 
+			<td><input type="button" value="1"></td> 
+			<td><input type="button" value="2"></td> 
+			<td><input type="button" value="3"></td> 
+			<td><input type="button" value="/"></td> 
+		</tr> 
+		<tr> 
+			<td><input type="button" value="4"></td> 
+			<td><input type="button" value="5"></td> 
+			<td><input type="button" value="6"></td> 
+			<td><input type="button" value="*"></td> 
+		</tr> 
+		<tr> 
+			<td><input type="button" value="7"></td> 
+			<td><input type="button" value="8"></td> 
+			<td><input type="button" value="9"></td> 
+			<td><input type="button" value="-"></td> 
+		</tr> 
+		<tr> 
+			<td><input type="button" value="0"></td> 
+			<td><input type="button" value="."></td> 
+			<td><input type="button" value="="></td> 
+			<td><input type="button" value="+"></td> 
+		</tr> 
+	</table> 
+</body> 
 
-    <div>
-        <button onclick="processNumberButton(this.innerHTML)">7</button>
-        <button onclick="processNumberButton(this.innerHTML)">8</button>
-        <button onclick="processNumberButton(this.innerHTML)">9</button>
-        <button onclick="processOperatorButton(this.innerHTML)" class="operator">/</button>
-    </div>
-
-    <div>
-        <button onclick="processNumberButton(this.innerHTML)">0</button>
-        <button onclick="processDecimalButton(this.innerHTML)">.</button>
-        <button onclick="processPercentageButton(this.innerHTML)">%</button>
-        <button onclick="processOperatorButton(this.innerHTML)" class="operator">x</button>
-    </div>
-
-    <div>
-        <button onclick="processNumberButton(this.innerHTML)">00</button>
-        <button onclick="processParenthesesButton(this.innerHTML)">(</button>
-        <button onclick="processParenthesesButton(this.innerHTML)">)</button>
-        <button onclick="processOperatorButton(this.innerHTML)" class="operator">^</button>
-    </div>
-
-    <div>
-        <button onclick="processResetButton()" class="reset">C</button>
-        <button onclick="processEqualsButton()" class="eval">=</button>
-    </div>
-
-</div>
-
-<script type="text/javascript" src="js/simplecalculator.js"></script>
-
-</body>
-</html>
+</html> 
